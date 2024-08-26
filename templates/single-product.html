@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>about products</title>
+</head>
+<body>
+<div style="text-align: center">
+    <p> Name: {{ product.product_name }} </p>
+    <p>Count: {{ product.count }} </p>
+    <img src="{{product.image.url}}" width='200px' alt="">
+    <p>Price: {{ product.price }} </p>
+    <p>Descriptions: {{ product.descriptions }} </p>
+    <p> date: {{ product.created_at|date:"d M y H:i" }} </p>
+</div>
+</body>
+</html>

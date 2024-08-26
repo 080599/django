@@ -1,5 +1,5 @@
 from django.contrib import admin
-from .models import CategoryModel,ProductModel,Cart
+from .models import CategoryModel,ProductModel,CartModel
 @admin.register(CategoryModel)
 class CategoryModelAdmin(admin.ModelAdmin):
     search_fields =['category_name']
@@ -12,11 +12,8 @@ class ProductModelAdmin(admin.ModelAdmin):
     list_dispaly=['id','product_name','price','count','created_at']
     list_filter=['created_at']
     ordering=['-id']
-@admin.register(Cart)
+@admin.register(CartModel)
 class CartAdmin(admin.ModelAdmin):
-    search_fields=['product_mname']
-    list_dispaly=['id','product_name','price','count','created_at']
-    list_filter=['created_at']
-    ordering=['-id']
+    pass
 #admin.site.register(CategoryModel)
 # Register your models here.
